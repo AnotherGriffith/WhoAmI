@@ -1,0 +1,22 @@
+/*styles used to further customize those in bootstrap */
+
+.col-sm-6 > h5{              
+    font-size: 3em;
+    font-weight: bold;       
+}
+.col-sm-6 > h6{              
+    font-size: 7em;
+    font-weight: bold;       
+}
+.color-red {
+    color: red;
+}
+.color-green {
+    color: green;
+}
+.color-lightgray {
+    color: lightgray;
+} 
+.centered-text {
+    text-align:center
+} 

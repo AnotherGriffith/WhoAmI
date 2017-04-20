@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I am...</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Who Am I">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+        <link rel="stylesheet" href="css/whoami-main.css">    
+        
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+          <h1>I am...</h1>
+        </div>
+        <div class="container" ng-app="myApp" ng-controller="myCtrl">
+            <div class="row">        
+                <div class="col-sm-6 centered-text">
+                    <h5 class="color-lightgray">Female</h5>
+                    <h6><i class="fi-female"></i></h6>
+                    <h5 ng-bind=femalePercent()+'%' ng-class="{'color-green': (femalePercent() >= 50), 'color-red': (femalePercent() < 50)}"></h5>
+                    <button class=" btn btn-success glyphicon glyphicon-ok" ng-click="incrementFemale()"> Vote</button>
+                </div>
+                <div class="col-sm-6 centered-text">
+                    <h5 class="color-lightgray">Male</h5>
+                    <h6><i class="fi-male"></i></h6>
+                    <h5 ng-bind=malePercent()+'%' ng-class="{'color-green': (malePercent() >= 50), 'color-red': (malePercent() < 50)}"></h5>    
+                    <button class="btn btn-success glyphicon glyphicon-ok"  ng-click="incrementMale()"> Vote</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/whoami.main.js"></script>
+    </body>
+</html>
